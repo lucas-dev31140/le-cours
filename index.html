@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionnaire Multilingue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Dictionnaire Multilingue</h1>
+            
+            <div class="form-section">
+                <h2>Ajouter un mot</h2>
+                <input type="text" id="wordInput" placeholder="Entrez un mot dans votre langue">
+                <input type="text" id="translationInput" placeholder="Entrez la traduction en français">
+                <button id="addWordButton">Ajouter au dictionnaire</button>
+            </div>
+            
+            <div class="translate-section">
+                <h2>Traduire du français vers votre langue</h2>
+                <textarea id="frenchTextInput" placeholder="Entrez le texte en français ici..."></textarea>
+                <button id="translateButton">Traduire</button>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <h2>Liste des mots traduits</h2>
+            <ul id="wordList"></ul>
+        </div>
+    </div>
+
+    <!-- Modale pour afficher la traduction -->
+    <div id="translationModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3>Traduction</h3>
+            <p id="translatedText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
